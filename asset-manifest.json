@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Promodoro-Timer/static/css/main.24104cdd.css",
+    "main.js": "/Promodoro-Timer/static/js/main.19a24e8b.js",
+    "static/js/488.64a62add.chunk.js": "/Promodoro-Timer/static/js/488.64a62add.chunk.js",
+    "index.html": "/Promodoro-Timer/index.html",
+    "main.24104cdd.css.map": "/Promodoro-Timer/static/css/main.24104cdd.css.map",
+    "main.19a24e8b.js.map": "/Promodoro-Timer/static/js/main.19a24e8b.js.map",
+    "488.64a62add.chunk.js.map": "/Promodoro-Timer/static/js/488.64a62add.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24104cdd.css",
+    "static/js/main.19a24e8b.js"
+  ]
+}
