@@ -1,0 +1,179 @@
+:root {
+  --glass-color: #919EB3;
+  --frame-color: #C19875;
+  --sand-color: #EDD0AA;
+}
+
+/* Set the entire background to violet */
+body {
+  background-color: rgb(44, 5, 240);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  position: relative; /* Allows absolute positioning for hourglass */
+}
+
+/* Center the session timer */
+.session-timer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Timer circle */
+.timer-circle {
+  width: 220px;
+  height: 220px;
+  background-color: rgba(244, 7, 7, 0.986);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 15px rgba(14, 0, 0, 0.904);
+  font-size: 15px;
+  position: relative;
+}
+
+/* Buttons inside the timer circle */
+.timer-buttons {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Layout for session and break controls */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  position: absolute;
+  bottom: 50px;
+}
+
+/* Break on the left, Session on the right */
+.break-controls,
+.session-controls {
+  text-align: left;
+  width: 1000px; /* Make it more visible */
+}
+
+
+
+/* Button Styling */
+button {
+  border: none;
+  background: black;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+}
+
+/* Hourglass Positioning */
+.hourglass-container {
+  position: absolute;
+  top: 20px;
+  right: 200px;
+  width: 180px;
+  height: 200px;
+}
+
+/* Hourglass Frame */
+.frame {
+  position: absolute;
+  width: 180px;
+  height: 200px;
+  border-top: 10px solid var(--frame-color);
+  border-bottom: 10px solid var(--frame-color);
+  animation: rotateFrame 5s infinite;
+}
+
+/* Hourglass Top */
+.top {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 100px;
+  clip-path: polygon(45% 100%, 55% 100%, 100% 0, 0 0);
+}
+
+/* Sand - top */
+.top::before {
+  content: '';
+  position: absolute;
+  width: 160px;
+  height: 80px;
+  bottom: 0;
+  background: var(--sand-color);
+  animation: 5s lowerTopSand infinite;
+}
+
+@keyframes lowerTopSand {
+  0% { transform: none; }
+  100% { transform: translateY(80px); }
+}
+
+/* Hourglass Bottom */
+.bottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
+  width: 160px;
+  height: 100px;
+  clip-path: polygon(45% 0, 55% 0, 100% 100%, 0 100%);
+}
+
+/* Bottom sand */
+.bottom::before {
+  content: '';
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 160px;
+  height: 80px;
+  bottom: 0;
+  background: var(--sand-color);
+  animation: 5s raiseBottomSand infinite;
+}
+
+@keyframes raiseBottomSand {
+  0% { transform: translate(-50%, 80px); }
+  100% { transform: translateX(-50%); border-radius: 50% 50% 0 0; }
+}
+
+/* Drip through to bottom */
+.drip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid var(--sand-color);
+  animation: fadeDrip 5s infinite;
+}
+
+@keyframes fadeDrip {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Glass Effect */
+.glass {
+  position: absolute;
+  top: -90px;
+  left: -15px;
+  width: 190px;
+  height: 190px;
+  transform: rotate(-270deg);
+  background: conic-gradient(from 0deg, white 0deg, transparent 90deg, white 180deg);
+}
