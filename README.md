@@ -1,3 +1,37 @@
+# ⏱️ Pomodoro Timer
+
+A simple and effective Pomodoro Timer built using **React**, **HTML**, **CSS**, and **JavaScript**. This timer helps you boost productivity by working in focused sprints with short and long breaks.
+
+---
+
+## ✨ Features
+- Customizable Pomodoro, Short Break, and Long Break intervals
+- Start, Pause, and Reset functionality
+- Audio notifications when the timer ends
+- Responsive design (works on both desktop and mobile)
+- Clean and minimal UI with React hooks (useState & useEffect)
+
+---
+
+## 🛠️ Tech Stack
+- **React**
+- **JavaScript (ES6+)**
+- **HTML5**
+- **CSS3**
+
+---
+
+## 📸 Demo
+[Live Demo](https://akramshaik615.github.io/Promodoro-Timer/) 
+
+---
+
+## 🚀 Installation & Usage
+
+1. **Clone the repository**
+   ```bash
+   git clone https://akramshaik615.github.io/Promodoro-Timer/.git
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
